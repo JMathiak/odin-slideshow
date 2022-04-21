@@ -1,6 +1,6 @@
 let i = 0;
 let isPaused = false;
-showSlide(i);
+
 let intervalFunct = setInterval("nextSlide(1)", 5000);
 
 const showSlide = (ind) => {
@@ -21,10 +21,13 @@ const showSlide = (ind) => {
   for (let j = 0; j < dots.length; j++) {
     dots[j].style.background = "grey";
   }
-  images[ind].style.display = "flex";
-  dots[ind].style.background = "black";
-};
+  i = ind;
+  console.log(i);
+  images[i].style.display = "flex";
 
+  dots[i].style.background = "black";
+};
+showSlide(i);
 const nextSlide = (change) => {
   showSlide((i += change));
 };
@@ -41,4 +44,12 @@ const togglePause = () => {
     clearInterval(intervalFunct);
     isPaused = true;
   }
+};
+
+const dotClick = (e) => {
+  let trgt = e.target.id;
+  let trgtNum = parseInt(trgt);
+  i = trgtNum;
+  showSlide(trgtNum);
+  togglePause();
 };
