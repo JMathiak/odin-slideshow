@@ -9,19 +9,19 @@
 </head>
 <body>
     <div class="slideshow">
-        <div class="slide">
+        <div class="slide fade">
             <div class="count">1/4</div>
             <img src="./images/dog1.jpg" alt="">
         </div>
-        <div class="slide">
+        <div class="slide fade">
             <div class="count">2/4</div>
             <img src="./images/dog2.jpg" alt="">
         </div>
-        <div class="slide">
+        <div class="slide fade">
             <div class="count">3/4</div>
             <img src="./images/dog3.jpg" alt="">
         </div>
-        <div class="slide">
+        <div class="slide fade">
             <div class="count">4/4</div>
             <img src="./images/dog4.jpg" alt="">
         </div>
@@ -31,9 +31,9 @@
         <div class="dot" id="2" onclick="dotClick(event)"></div>
         <div class="dot" id="3" onclick="dotClick(event)"></div>
     </div>
-    <div class="buttons"><button onclick="nextSlide(-1)"><</button> 
+    <div class="buttons"><button onclick="nextSlide(-1)">&#10094;</button> 
         <button id='playControl' onclick="togglePause()">Pause</button>
-        <button onclick="nextSlide(1)">></button></div>
+        <button onclick="nextSlide(1)">&#10095;</button></div>
 </div>
 <script src="script.js"></script>
 </body>
