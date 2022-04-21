@@ -1,5 +1,5 @@
 img{
-    width: 20%;
+    width: 100%;
 }
 
 .slideshow{
@@ -11,9 +11,47 @@ img{
     display: none;
     justify-content: center;
     margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 40%;
 }
 
 .buttons{
     display: flex;
     justify-content: center;
+    background-color: none;
+    
 }
+
+
+.count{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.dot{
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    border: 2px solid white;
+    background-color: grey;
+    cursor: pointer;
+    
+}
+
+.dots{
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+button{
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+    
