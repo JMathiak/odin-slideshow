@@ -12,3 +12,8 @@ img{
     justify-content: center;
     margin: 0 auto;
 }
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
