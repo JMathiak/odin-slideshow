@@ -1,4 +1,7 @@
 let i = 0;
+let isPaused = false;
+showSlide(i);
+let intervalFunct = setInterval("nextSlide(1)", 5000);
 
 const showSlide = (ind) => {
   let images = document.getElementsByClassName("slide");
@@ -25,5 +28,17 @@ const showSlide = (ind) => {
 const nextSlide = (change) => {
   showSlide((i += change));
 };
-showSlide(i);
-setInterval("nextSlide(1)", 5000);
+
+const togglePause = () => {
+  if (isPaused) {
+    let btn = document.getElementById("playControl");
+    btn.innerHTML = "Pause";
+    intervalFunct = setInterval("nextSlide(1)", 5000);
+    isPaused = false;
+  } else {
+    let btn = document.getElementById("playControl");
+    btn.innerHTML = "Resume";
+    clearInterval(intervalFunct);
+    isPaused = true;
+  }
+};
